@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(username: 'Zayd')
+User.create(username: 'Amr')
+
+Note.create(title: 'What is Redux?', content: 'Redux is a small library and design pattern', user_id: 1)
+Note.create(title: 'What is Rails?', content: 'Rails is heavyweight Ruby framework', user_id: 2)
+
+Tag.create(text: 'Redux')
+Tag.create(text: 'Rails')
+
+NoteTag.create(note_id: 1, tag_id: 1)
+NoteTag.create(note_id: 2, tag_id: 2)
