@@ -9,4 +9,8 @@ class NotesController < ApplicationController
     render json: note
   end
 
+  def destroy
+    Note.delete(params[:id])
+  end
+
 end
