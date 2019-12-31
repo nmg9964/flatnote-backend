@@ -31,7 +31,7 @@ module FlatnoteBackend
     config.middleware.insert_before 0, Rack::Cors do
       allow do
           origins '*'
-          resource '*', headers: :any, methods: [:get, :post]
+          resource '*', headers: :any, methods: [:get, :post, :show, :delete, :patch]
       end
     end
 
