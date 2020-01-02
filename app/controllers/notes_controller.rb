@@ -6,7 +6,7 @@ class NotesController < ApplicationController
 
   def create
     note = Note.create(title: params[:title], content: params[:content], user_id: params[:user_id])
-    render json: note
+    render json: note, include: :tags
   end
 
   def show
@@ -17,7 +17,7 @@ class NotesController < ApplicationController
   def update
     note = Note.find(params[:id])
     note.update(title: params[:title], content: params[:content])
-    render json: note
+    render json: note, include: :tags
   end
 
   def destroy
